@@ -2,7 +2,7 @@ on:
   - pull_request
   - push
 
-name: build
+name: sqlite
 
 jobs:
   tests:
@@ -46,7 +46,7 @@ jobs:
         run: vendor/bin/phpunit --coverage-clover=coverage.xml --colors=always
 
       - name: Upload coverage to Codecov
-        if: matrix.php == '8.0'      
+        if: matrix.php == '8.0'
         uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
