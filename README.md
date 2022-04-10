@@ -2,7 +2,7 @@
 
 ## Github Actions
 
-- [codeception](/.github/workflows/codeception.yml)
+- [codeception](/github-actions-codeception.yml)
 - [infection](/.github/workflows/infection.yml)
 - [mssql](/.github/workflows/mssql.yml)
 - [mysql](/.github/workflows/mysql.yml)
