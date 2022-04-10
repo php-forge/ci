@@ -1,0 +1,16 @@
+{
+    "source": {
+        "directories": [
+            "tests"
+        ]
+    },
+    "logs": {
+        "text": "php:\/\/stderr",
+        "stryker": {
+            "report": "master"
+        }
+    },
+    "mutators": {
+        "@default": true
+    }
+}

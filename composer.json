@@ -1,0 +1,32 @@
+{
+    "name": "forge/ci",
+    "type": "library",
+    "description": "Recipes para ci (continuous integration) github actions y scrutinizer.",
+    "keywords": [
+        "forge",
+        "ci",
+        "github actions",
+        "scrutinizer"
+    ],
+    "license": "BSD-3-Clause",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "roave/infection-static-analysis-plugin": "^1.7",
+        "vimeo/psalm": "^4.18"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Forge\\Ci\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "infection/extension-installer": true
+        }
+    }
+}

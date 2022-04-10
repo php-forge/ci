@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<phpunit bootstrap="vendor/autoload.php"
+  colors="true"
+  verbose="true"
+  convertErrorsToExceptions="true"
+  convertNoticesToExceptions="true"
+  convertWarningsToExceptions="true"
+  stopOnFailure="false"
+>
+  <php>
+    <ini name="error_reporting" value="-1" />
+  </php>
+
+  <coverage>
+    <exclude>
+      <directory>./vendor</directory>
+    </exclude>
+  </coverage>
+
+  <testsuites>
+    <testsuite name="forge-ci">
+      <directory>./tests</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>
