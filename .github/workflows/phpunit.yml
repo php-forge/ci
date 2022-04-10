@@ -1,0 +1,53 @@
+on:
+  - pull_request
+  - push
+
+name: phpunit
+
+jobs:
+  tests:
+    name: PHP ${{ matrix.php }}-${{ matrix.os }}
+
+    runs-on: ${{ matrix.os }}
+
+    env:
+      extensions: intl
+
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+
+        php:
+          - 8.0
+          - 8.1
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: ${{ env.extensions }}
+          ini-values: date.timezone='UTC'
+          coverage: pcov
+          tools: composer:v2, pecl
+
+      - name: Update composer
+        run: composer self-update
+
+      - name: Install dependencies with composer
+        run: composer update --prefer-dist --no-interaction --no-progress --optimize-autoloader --ansi
+
+      - name: Run tests with phpunit
+        run: vendor/bin/phpunit --coverage-clover=coverage.xml --colors=always
+
+      - name: Upload coverage to Codecov
+        if: matrix.os == 'ubuntu-latest' && matrix.php == '8.0'
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./coverage.xml
