@@ -39,14 +39,14 @@ on:
 
 jobs:
   phpunit:
-    name: PHP ${{ fromJson(inputs.php) }}-${{ fromJson(inputs.os) } }
+    name: PHP ${{fromJson(inputs.php)}}-${{fromJson(inputs.os)}}
 
-    runs-on: ${{ fromJson(inputs.os) }}
+    runs-on: ${{fromJson(inputs.os)}}
 
     strategy:
       matrix:
-        os: ${{ fromJson(inputs.os) }}
-        php: ${{ fromJson(inputs.php) }}
+        os: ${{fromJson(inputs.os)}}
+        php: ${{fromJson(inputs.php)}}
 
     steps:
       - name: Checkout
@@ -55,11 +55,11 @@ jobs:
       - name: Install PHP
         uses: shivammathur/setup-php@v2
         with:
-          coverage: ${{ fromJson(inputs.coverage) }}
-          extensions: ${{ fromJson(inputs.extensions) }}
-          ini-values: ${{ fromJson(inputs.init-values) }}
-          php-version: ${{ fromJson(inputs.php) }}
-          tools: ${{ fromJson(inputs.tools) }}
+          coverage: ${{fromJson(inputs.coverage)}}
+          extensions: ${{fromJson(inputs.extensions)}}
+          ini-values: ${{fromJson(inputs.init-values)}}
+          php-version: ${{fromJson(inputs.php)}}
+          tools: ${{fromJson(inputs.tools)}}
 
       - name: Determine composer cache directory on Linux
         if: matrix.os == 'ubuntu-latest'
@@ -75,7 +75,7 @@ jobs:
           path: ${{ env.COMPOSER_CACHE_DIR }}
           key: php${{ fromJson(inputs.php) }}-composer-${{ hashFiles('**/composer.json') }}
           restore-keys: |
-            php${{ fromJson(inputs.php) }}-composer-
+            php${{fromJson(inputs.php)}}-composer-
 
       - name: Update composer
         run: composer self-update
