@@ -20,12 +20,12 @@ on:
         type: string
       os:
         description: Os to test, separated by comma
-        default: [ubuntu-latest, windows-latest]
+        default: ['ubuntu-latest', 'windows-latest']
         required: false
         type: string
       php:
         description: PHP versions to test, separated by comma
-        default: [8.0, 8.1]
+        default: ['8.0', '8.1']
         required: false
         type: string
       tools:
