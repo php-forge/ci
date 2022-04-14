@@ -39,7 +39,7 @@ on:
 
 jobs:
   phpunit:
-    name: PHP ${{ fromJson(inputs.php) }}-${{ fromJson(inputs.os) } }
+    name: PHP ${{ fromJson(inputs.php) }}-${{ fromJson(inputs.os) }}
 
     runs-on: ${{ fromJson(inputs.os) }}
 
