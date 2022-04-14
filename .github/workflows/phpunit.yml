@@ -45,8 +45,8 @@ jobs:
 
     strategy:
       matrix:
-        os: ${{ fromJson(inputs.os) }}
-        php: ${{ fromJson(inputs.php) }}
+        os: ${{fromJson(inputs.os)}}
+        php: ${{fromJson(inputs.php)}}
 
     steps:
       - name: Checkout
