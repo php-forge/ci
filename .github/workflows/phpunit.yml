@@ -38,7 +38,7 @@ on:
         required: true
 
 jobs:
-  tests:
+  phpunit:
     name: PHP ${{ fromJson(inputs.php) }}-${{ fromJson(inputs.os) } }
 
     runs-on: ${{ fromJson(inputs.os) }}
