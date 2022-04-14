@@ -9,9 +9,9 @@ jobs:
     uses: php-forge/ci/.github/workflows/phpunit.yml@main
     with:
       os: >-
-        [ubuntu-latest, windows-latest]
+        ["ubuntu-latest", "windows-latest"]
       php: >-
-        [8.0, 8.1]
+        ["8.0", "8.1"]
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
