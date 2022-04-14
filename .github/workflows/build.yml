@@ -7,10 +7,5 @@ on:
 jobs:
   phpunit:
     uses: ./.github/workflows/phpunit.yml
-    with:
-      os: >-
-        ['ubuntu-latest', 'windows-latest']
-      php: >-
-        ['8.0', '8.1']
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
