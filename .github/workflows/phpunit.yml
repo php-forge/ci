@@ -1,4 +1,4 @@
-name: PHPUNIT
+name: phpunit
 
 on:
   workflow_call:
