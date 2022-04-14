@@ -6,7 +6,7 @@ on:
 
 jobs:
   phpunit:
-    uses: php-forge/reusable-actions/.github/workflows/phpunit.yml
+    uses: php-forge/reusable-actions/.github/workflows/phpunit.yml@main
     with:
       os: >-
         ['ubuntu-latest', 'windows-latest']
