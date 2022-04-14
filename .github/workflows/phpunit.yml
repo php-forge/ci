@@ -20,13 +20,11 @@ on:
         type: string
       os:
         description: Os to test, separated by comma
-        default: 'ubuntu-latest'
-        required: false
+        required: true
         type: string
       php:
         description: PHP versions to test, separated by comma
-        default: '8.0'
-        required: false
+        required: true
         type: string
       tools:
         description: Tools to test, separated by comma
@@ -45,8 +43,8 @@ jobs:
 
     strategy:
       matrix:
-        os: ${{fromJson(inputs.os)}}
-        php: ${{fromJson(inputs.php)}}
+        os: ${{ fromJson(inputs.os) }}
+        php: ${{ fromJson(inputs.php) }}
 
     steps:
       - name: Checkout
