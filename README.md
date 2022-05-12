@@ -18,7 +18,7 @@
 - [mutation](/.github/workflows/mutation.yml)
 - [mysql](/.github/workflows/mysql.yml)
 - [oracle](/.github/workflows/oracle.yml)
-- [phpunit](/.github/workflows/phpunit.yml)
+- [phpunit](/.github/workflows/build.yml)
 - [postgresql](/.github/workflows/pgsql.yml)
 - [psalm](/.github/workflows/psalm.yml)
 - [sqlite](/.github/workflows/sqlite.yml)

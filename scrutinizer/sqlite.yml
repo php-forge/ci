@@ -1,6 +1,3 @@
-# Recipes para `SCRUTINIZER`, `PHP`, `SQLITE` Y `PHPUNIT`.
-
-```yml
 checks:
   php: true
 
@@ -41,4 +38,3 @@ build:
             coverage:
               file: coverage.xml
               format: php-clover
-```
