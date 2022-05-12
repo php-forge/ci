@@ -32,3 +32,14 @@
 - [phpunit](/scrutinizer/phpunit.yml)
 - [postgresql](/scrutinizer/pgsql.yml)
 - [sqlite](/scrutinizer/sqlite.yml)
+
+## Licencia
+
+El paquete `php-forge/reusable-actions` es software libre. Se publica bajo los términos de la Licencia BSD.
+Consulte [`LICENSE`](./LICENSE.md) para obtener más información.
+
+Mantenido por [Terabytesoftw](https://github.com/terabytesoftw).
+
+## Nuestras redes sociales
+
+[![Twitter](https://img.shields.io/badge/twitter-follow-1DA1F2?logo=twitter&logoColor=1DA1F2&labelColor=555555?style=flat)](https://twitter.com/PhpForge)
