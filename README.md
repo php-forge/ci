@@ -36,7 +36,7 @@
 ## Licencia
 
 El paquete `php-forge/reusable-actions` es software libre. Se publica bajo los términos de la Licencia BSD.
-Consulte [`LICENSE`](./LICENSE.md) para obtener más información.
+Consulte [`LICENSE`](/LICENSE) para obtener más información.
 
 Mantenido por [Terabytesoftw](https://github.com/terabytesoftw).
 
