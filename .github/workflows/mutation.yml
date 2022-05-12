@@ -1,3 +1,7 @@
+on:
+  - pull_request
+  - push
+
 name: mutation test
 
 jobs:
